@@ -1,21 +1,27 @@
-﻿namespace MusicAssistant;
+﻿using MusicTheoryLib.Core;
+using MusicTheoryLib.Parsers;
+using MusicTheoryLib.Validation;
+
+namespace MusicAssistant;
 
 class Program
 {
+    private static bool IsRunning = true;
+    
     static void Main(string[] args)
     {
-        var initializeDictionary = Scale.KeyScales; // initializes the KeyScales dictionary, just ignore this
-
-        Chord chord = new Chord("bMajorTriad");
-
-        Console.Write($"{chord.Name}: ");
-
-        foreach (var note in chord.ChordNotes)
+        Console.WriteLine("Welcome to the NoteForge! \n type /help to list all the commands");
+        
+        string input;
+        
+        while (IsRunning)
         {
-            Console.Write($"{note} ");
+            input = Console.ReadLine();
+
+            if (InputValidation.IsValidCommand(input))
+            {
+                CommandHelper.ExecuteCommand(CommandParser.ParseCommand(input));
+            }
         }
-
-        Console.WriteLine();
-
     }
 }

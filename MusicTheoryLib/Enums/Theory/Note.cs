@@ -1,4 +1,4 @@
-namespace MusicTheoryLib.Enums;
+namespace MusicTheoryLib.Enums.Theory;
 
 public enum Note
 {

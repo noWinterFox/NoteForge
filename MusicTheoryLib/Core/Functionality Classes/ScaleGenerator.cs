@@ -1,23 +1,10 @@
-namespace MusicAssistant;
+using MusicTheoryLib.Data;
+using MusicTheoryLib.Enums.Theory;
 
-public abstract class Scale
+namespace MusicTheoryLib.Core;
+
+public class ScaleGenerator
 {
-    private static readonly int[] MajorInterval = [2, 2, 1, 2, 2, 2, 1];
-    private static readonly int[] MinorInterval = [2, 1, 2, 2, 1, 2, 2];
-
-    private static readonly Dictionary<Mode, int[]> ModeIntervals = new()
-    {
-        { Mode.Lydian, [2, 2, 2, 1, 2, 2, 1] },
-        { Mode.Ionian, MajorInterval },
-        { Mode.Major, MajorInterval },
-        { Mode.Mixolydian, [2, 2, 1, 2, 2, 1, 2] },
-        { Mode.Dorian, [2, 1, 2, 2, 2, 1, 2] },
-        { Mode.Aeolian, MinorInterval },
-        { Mode.Minor, MinorInterval },
-        { Mode.Phrygian, [1, 2, 2, 2, 1, 2, 2] },
-        { Mode.Locrian, [1, 2, 2, 1, 2, 2, 2] }
-    };
-
     public static readonly Dictionary<Note, Note[]> KeyScales = new()
     {
         { Note.A, GenerateScale(Note.A) },
@@ -33,11 +20,11 @@ public abstract class Scale
         { Note.G, GenerateScale(Note.G) },
         { Note.GSharpAFlat, GenerateScale(Note.GSharpAFlat) }
     };
-
+    
     public static Note[] GenerateScale(Note key, Mode mode = Mode.Major)
     {
         // if no specified mode, default to major
-        int[] intervals = ModeIntervals.GetValueOrDefault(mode, MajorInterval);
+        int[] intervals = Intervals.ModeIntervals.GetValueOrDefault(mode, Intervals.ModeIntervals[mode]);
         
         Note[] keyNotes = new Note[7];
         Note currentNote = key;
@@ -51,5 +38,4 @@ public abstract class Scale
 
         return keyNotes;
     }
-
 }

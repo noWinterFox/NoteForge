@@ -1,4 +1,4 @@
-# Music Theory App Features
+# NoteForge features
 
 ## Phase 1: Console Application
 
@@ -9,7 +9,7 @@
 - Display the scale in text format: notes only.
 - Option to show enharmonic equivalents (e.g., C# vs. Db) and toggle between different notation systems, such as Helmholtz or scientific pitch notation.
 
-  <span style="color: green;">**Advanced Options:**</span>
+  **Advanced Options:**
   - Include historical or obscure scales (e.g., medieval modes, whole-tone scales).
   - Show how scales relate to each other (e.g., how the melodic minor scale differs from the natural minor).
 
@@ -17,7 +17,7 @@
 - Input a key and scale, and the app generates all diatonic chords (triads, seventh chords, etc.).
 - Display chords in text format.
 
-  <span style="color: green;">**Advanced Options:**</span>
+  **Advanced Options:**
   - Include options for extended chords (e.g., 9ths, 11ths, 13ths) and altered chords (e.g., #5, b9).
   - Show variations of diatonic chords (e.g., minor 7 vs. dominant 7 in a major key).
 
@@ -27,11 +27,8 @@
 #### Transposition Tool
 - Transpose chords, scales, or melodies to a new key with one click.
 
-  <span style="color: green;">**Advanced Options:**</span>
+  **Advanced Options:**
   - Allow users to set rules for transposition (e.g., maintain chord function vs. exact interval transposition).
-
-#### Theory Glossary
-- Include a searchable glossary of music theory terms and concepts.
 
 ---
 
@@ -51,7 +48,7 @@
 - Input a chord progression, and the app identifies the key(s), scale(s), and harmonic functions.
 - Highlight common patterns (e.g., ii-V-I, circle of fifths progressions).
 
-  <span style="color: green;">**Advanced Analysis:**</span>
+  **Advanced Analysis:**
   - Detect modal interchange (e.g., borrowed chords from parallel modes).
   - Identify secondary dominants and extended harmony (e.g., augmented sixth chords).
 
@@ -59,7 +56,7 @@
 - Interactive circle of fifths to quickly see related keys, diatonic chords, and modulations.
 - Highlight relative major/minor pairs and parallel keys.
 
-  <span style="color: green;">**Advanced Features:**</span>
+  **Advanced Features:**
   - Show common modulation paths between keys using the circle of fifths.
   - Map chord functions (tonic, dominant, etc.) onto the circle of fifths.
 
@@ -67,6 +64,22 @@
 - Built-in metronome for practicing scales, chords, or progressions.
 - Playback options for generated scales, chords, or progressions with adjustable tempo and instrument sounds.
 - Loop specific sections of a progression or melody for practice or improvisation.
+
+#### Theory Glossary
+- Include a searchable glossary of music theory terms and concepts.
+
+#### Tab-to-Sheet Music Translator
+- **Input:** Guitar tablature (text-based or graphical) and tuning (e.g., standard, drop D).
+- **Output:** Traditional sheet music (staff notation) with notes, rhythms, and dynamics.
+- **Visual Representation:** Display notes on a piano roll and interactive guitar fretboard.
+- **Playback:** Play back the translated sheet music with adjustable tempo and instrument sounds.
+- **Export Options:** Export as PDF, MIDI, or MusicXML for use in other software.
+
+  **Advanced Features:**
+  - Rhythm detection to infer note durations from tablature.
+  - Chord recognition to display chord symbols above the staff.
+  - Support for custom tunings (e.g., open G, drop D).
+  - Error correction for common tablature mistakes.
 
 #### Dark Mode and Custom Themes
 - Visual customization for better usability in different environments.
@@ -77,6 +90,12 @@
 
 #### Interactive Examples
 - Provide interactive examples of famous songs or compositions to demonstrate theory concepts.
+
+#### Tab-to-Sheet Music Translator (Enhanced)
+- **Real-Time Translation:** Translate tablature to sheet music as the user types or uploads.
+- **Interactive Learning:** Highlight the relationship between tablature and sheet music with tooltips and annotations.
+- **Advanced Visualizations:** Show notes on a piano roll and fretboard simultaneously.
+- **Customizable Output:** Allow users to adjust clefs, time signatures, and key signatures.
 
 ---
 
@@ -104,7 +123,7 @@
 - Support for alternate tunings (e.g., drop D, open G) and instruments (e.g., ukulele, bass).
 - Show scales and chords in the context of the custom tuning.
 
-  <span style="color: green;">**Advanced Options:**</span>
+  **Advanced Options:**
   - Support microtonal or non-Western tuning systems (e.g., quarter tones, Just Intonation).
 
 #### Visual Audio Tools
@@ -115,7 +134,7 @@
 - Export results as text, PDF, MIDI, or WAV/MP3.
 - Customizable output formats (e.g., chord charts, piano roll diagrams).
 
-  <span style="color: green;">**DAW Integration:**</span>
+  **DAW Integration:**
   - Export directly to DAW formats (e.g., Ableton Live Set, Logic Pro project) with pre-configured tracks for chords, melody, and bass.
 
 #### Collaborative Features
@@ -174,3 +193,7 @@
 
 ### Songwriters
 - Transpose a song to a new key or explore alternate chord voicings.
+
+### Guitarists
+- Translate tablature to sheet music for better understanding and communication.
+- Visualize scales and chords on a fretboard for practice and improvisation.
